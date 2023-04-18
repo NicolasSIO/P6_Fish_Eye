@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d679072c3e.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <title>Fisheye - photographe</title>
+  </head>
+  <body>
+    <header role="banner">
+      <a href="./index.html">
+        <img src="assets/images/logo.png" class="logo tabindex-0" alt="logo" />
+      </a>
+    </header>
+    <main id="main" class="relative">
+      <div class="photograph-header"></div>
+      <div class="tri-div">
+        <label for="tri" class="tri-p">Trier par</label>
+        <select
+          name="tri"
+          id="tri"
+          class="tri-select tabindex-0"
+          aria-label="Tri les médias"
+          tabindex="0"
+        >
+          <option value="popularite" class="tri-option">Popularité</option>
+          <option value="date" class="tri-option">Date</option>
+          <option value="titre" class="tri-option">Titre</option>
+        </select>
+      </div>
+      <article class="media_article" aria-label="Afffiche les médias"></article>
+      <div class="cadre">
+        <p class="likes"></p>
+        <p class="price"></p>
+      </div>
+      <div class="lightbox" aria-label="Lightbox du média">
+        <button class="lightbox-close">
+          <img src="assets/icons/closeRed.svg" alt="Fermer lightbox" />
+        </button>
+        <div class="lightbox-container">
+          <button class="lightbox-prev">
+            <img
+              src="assets/icons/arrowLeft.svg"
+              alt="Média précédent"
+              class="fleche"
+            />
+          </button>
+          <div class="lightbox-media-container"></div>
+          <button class="lightbox-next">
+            <img
+              src="assets/icons/arrowRight.svg"
+              alt="Média suivante"
+              class="fleche"
+            />
+          </button>
+        </div>
+      </div>
+    </main>
+    <div id="contact_modal">
+      <div class="modal">
+        <header>
+          <div>
+            <h2>Contactez-moi</h2>
+            <p class="contact_name"></p>
+          </div>
+          <img
+            src="assets/icons/closeWhite.svg"
+            onclick="closeModal()"
+            onkeyup="closeModal()"
+            class="close"
+            alt="Fermeture modal"
+          />
+        </header>
+        <form name="contact" method="get" action="photographer.html">
+          <div class="formData">
+            <label for="first">Prénom</label>
+            <input class="text-control" type="text" id="first" name="first" />
+          </div>
+          <div class="formData">
+            <label for="last">Nom</label>
+            <input class="text-control" type="text" id="last" name="last" />
+          </div>
+          <div class="formData">
+            <label for="email">E-mail</label>
+            <input class="text-control" type="email" id="email" name="email" />
+          </div>
+          <div class="formData">
+            <label for="message">Votre message</label>
+            <input
+              class="text-control input-message"
+              id="message"
+              name="message"
+            />
+          </div>
+          <button class="contact_button btn-submit" type="submit">
+            Envoyer
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="./scripts/utils/lightbox.js"></script>
+    <script type="module" src="./scripts/pages/photographer.js"></script>
+    <script src="./scripts/utils/contactForm.js"></script>
+  </body>
+</html>
