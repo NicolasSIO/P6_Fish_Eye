@@ -42,12 +42,27 @@ class Photographer {
     let coeurs = document.querySelectorAll(".like");
     coeurs.forEach((coeur) => {
       coeur.addEventListener("click", () => {
-        let likeMedia = parseInt(coeur.childNodes[0].nodeValue) + 1;
-        likes++;
-        coeur.innerHTML = `${likeMedia} <img src="assets/icons/heartRed.svg" alt="Coeur" class="coeur"/>`;
-        document.querySelector(
-          ".likes"
-        ).innerHTML = `${likes} <img src="assets/icons/heartBlack.svg" alt="Coeur" class="coeur"/>`;
+        if (!coeur.classList.contains("liked")) {
+          let likeMedia = parseInt(coeur.childNodes[0].nodeValue) + 1;
+          likes++;
+          coeur.innerHTML = `${likeMedia} <img src="assets/icons/heartRed.svg" alt="Coeur" class="coeur"/>`;
+          document.querySelector(
+            ".likes"
+          ).innerHTML = `${likes} <img src="assets/icons/heartBlack.svg" alt="Coeur" class="coeur"/>`;
+          coeur.classList.add("liked");
+        }
+      });
+      coeur.addEventListener("keyup", (e) => {
+        if (e.keyCode === 13)
+          if (!coeur.classList.contains("liked")) {
+            let likeMedia = parseInt(coeur.childNodes[0].nodeValue) + 1;
+            likes++;
+            coeur.innerHTML = `${likeMedia} <img src="assets/icons/heartRed.svg" alt="Coeur" class="coeur"/>`;
+            document.querySelector(
+              ".likes"
+            ).innerHTML = `${likes} <img src="assets/icons/heartBlack.svg" alt="Coeur" class="coeur"/>`;
+            coeur.classList.add("liked");
+          }
       });
     });
 
@@ -91,7 +106,7 @@ class Photographer {
         let sorted = indexesArray.sort((a, b) => {
           a = a.childNodes[1].getAttribute("data-like");
           b = b.childNodes[1].getAttribute("data-like");
-          return a - b;
+          return b - a;
         });
         document.querySelector(".media_article").innerHTML = "";
         sorted.forEach((e) =>

@@ -213,6 +213,7 @@ form input {
 
 .input-message {
   height: 170px;
+  width: 100%;
 }
 
 .btn-submit {

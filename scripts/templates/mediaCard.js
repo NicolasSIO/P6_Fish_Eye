@@ -25,7 +25,7 @@ export default class MediaCard {
       </div>
       <footer class="footer-figure">
         <p>${this._media.title}</p>
-        <p class="like">${this._media.likes} <img src="assets/icons/heartRed.svg" alt="Coeur" class="coeur"/></p>
+        <p class="like" tabindex="0">${this._media.likes} <img src="assets/icons/heartRed.svg" alt="Coeur" class="coeur"/></p>
       </footer>
     `;
 
@@ -46,7 +46,7 @@ export default class MediaCard {
       </div>
       <footer class="footer-figure">
         <p>${this._media.title}</p>
-        <p class="like">${this._media.likes} <img src="assets/icons/heartRed.svg" alt="Coeur" class="coeur"/></p>
+        <p class="like" tabindex="0">${this._media.likes} <img src="assets/icons/heartRed.svg" alt="Coeur" class="coeur"/></p>
       </footer>
     `;
 
