@@ -48,16 +48,37 @@
 .tri-p {
   font-size: 18px;
   font-weight: 700;
-  margin-right: 25px;
+  padding-right: 25px;
+  padding-top: 15px;
 }
 
-.tri-select {
-  background-color: #911c1c;
+.list-tri {
+  list-style: none;
+  height: 50px;
   width: 170px;
-  height: 57px;
+  overflow: hidden;
+}
+
+.arrow-tri {
+  position: absolute;
   color: white;
-  font-size: 18px;
-  font-weight: 700;
+  right: 18px;
+  top: 14px;
+}
+
+li > .reverse-arrow-tri {
+  transform: rotate(180deg);
+  position: absolute;
+  color: white;
+  right: 18px;
+  top: 14px;
+}
+
+.tri-option {
+  background-color: #901c1c;
+  color: white;
+  padding: 14px 20px;
+  border: solid 1px white;
   cursor: pointer;
 }
 
@@ -278,7 +299,14 @@ form input {
 
 .lightbox-media-container {
   max-width: 1050px;
-  height: 900px;
+  height: 90vh;
+}
+
+.media-title {
+  color: #901c1c;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 12px;
 }
 
 /* ----------------- */

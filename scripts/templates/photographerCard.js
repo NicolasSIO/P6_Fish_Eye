@@ -35,7 +35,7 @@ export default class PhotographerCard {
         <p class="photograph-location">${this._photographer.city}, ${this._photographer.country}</p>
         <p class="photograp-tagline">${this._photographer.tagline}</p>
       </div>
-      <button class="contact_button tabindex-0" tabindex="0" onclick="displayModal()">
+      <button class="contact_button" tabindex="0" onclick="displayModal()">
         Contactez-moi
       </button>
       <img

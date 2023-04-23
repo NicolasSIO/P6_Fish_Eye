@@ -18,24 +18,27 @@
   <body>
     <header role="banner">
       <a href="./index.html">
-        <img src="assets/images/logo.png" class="logo tabindex-0" alt="logo" />
+        <img src="assets/images/logo.png" class="logo" alt="logo" />
       </a>
     </header>
     <main id="main" class="relative">
       <div class="photograph-header"></div>
-      <div class="tri-div">
-        <label for="tri" class="tri-p">Trier par</label>
-        <select
-          name="tri"
+      <div class="tri-div relative">
+        <span class="tri-p">Trier par</span>
+        <ul
           id="tri"
-          class="tri-select tabindex-0"
+          class="list-tri relative"
           aria-label="Tri les médias"
           tabindex="0"
         >
-          <option value="popularite" class="tri-option">Popularité</option>
-          <option value="date" class="tri-option">Date</option>
-          <option value="titre" class="tri-option">Titre</option>
-        </select>
+          <li class="tri-option">
+            <span class="selected-tri">Popularité</span>
+            <span class="arrow-tri">^</span>
+          </li>
+          <li class="tri-option">Popularité</li>
+          <li class="tri-option">Date</li>
+          <li class="tri-option">Titre</li>
+        </ul>
       </div>
       <article class="media_article" aria-label="Afffiche les médias"></article>
       <div class="cadre">
@@ -54,7 +57,10 @@
               class="fleche"
             />
           </button>
-          <div class="lightbox-media-container"></div>
+          <div>
+            <div class="lightbox-media-container"></div>
+            <div class="media-title"></div>
+          </div>
           <button class="lightbox-next">
             <img
               src="assets/icons/arrowRight.svg"
