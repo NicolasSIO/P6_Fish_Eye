@@ -32,6 +32,7 @@
   font-size: 24px;
   color: #901c1c;
   font-weight: 400;
+  margin-bottom: 19px;
 }
 
 .photograph-tagline {
@@ -49,37 +50,16 @@
   font-size: 18px;
   font-weight: 700;
   padding-right: 25px;
-  padding-top: 15px;
+  padding-top: 12px;
 }
 
-.list-tri {
-  list-style: none;
-  height: 50px;
+.tri-select {
+  background-color: #911c1c;
   width: 170px;
-  overflow: hidden;
-}
-
-.arrow-tri {
-  position: absolute;
+  height: 57px;
   color: white;
-  right: 18px;
-  top: 14px;
-}
-
-li > .reverse-arrow-tri {
-  transform: rotate(180deg);
-  position: absolute;
-  color: white;
-  right: 18px;
-  top: 14px;
-}
-
-.tri-option {
-  background-color: #901c1c;
-  color: white;
-  padding: 14px 20px;
-  border: solid 1px white;
-  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .media_article {
